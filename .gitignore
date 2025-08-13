@@ -1,0 +1,38 @@
+# Arduino IDE
+*.hex
+*.elf
+*.bin
+build/
+*.cache
+
+# Arduino IDE 2.x
+.vscode/
+.settings/
+.project
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Library dependencies (if using git submodules)
+libraries/
