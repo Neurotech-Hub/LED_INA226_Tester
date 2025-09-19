@@ -182,7 +182,8 @@ String getConversionTimeString(ConversionTime convTime) {
 int getAveragingSamplesCount(AveragingSamples avgSetting) {
   switch(avgSetting) {
     case AVG_1: return 1;
-    case AVG_4: return 4;
+    case AVG_4: return 4;    
+    case AVG_16: return 16;
     default: return 1;
   }
 }
@@ -207,11 +208,11 @@ void runTest() {
   ConversionTime convTimes[] = {
     CONV_140US, CONV_204US, CONV_332US, CONV_588US, 
     CONV_1100US};
-  AveragingSamples avgSamples[] = {AVG_1, AVG_4};
+  AveragingSamples avgSamples[] = {AVG_1, AVG_4, AVG_16};
 
   for (int i = 0; i < 5; i++) {
     ConversionTime convTime = convTimes[i];
-    for (int j = 0; j < 2; j++) {
+    for (int j = 0; j < 3; j++) {
       AveragingSamples avgSample = avgSamples[j];
 
       // Update configuration on the INA226
